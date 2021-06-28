@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
     <link rel="manifest" href="img/site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <title>Razieh Boroon</title>
 
     <link
@@ -18,11 +19,11 @@
   </head>
   <body>
     <!-- Header -->
-    <div class="container">
+    
     <header id="header">
-      <nav>
+      <nav div data-aos="fade-down" data-aos-duration="1000" data-aos-delay="500">
         <div class="nav-container">
-          <img src="img/android-chrome-192x192.png" alt="logo" class="logo" />
+          <a href="#header"><img src="img/android-chrome-192x192.png" alt="logo" class="logo" /></a>
           <div class="btn"><i class="fas fa-bars"></i></div>
         </div>
         <ul id="menu">
@@ -33,7 +34,7 @@
       </nav>
       <div class="banner" id="banner">
         <div class="banner-center">
-          <h6>Hi, my name is</h3>
+          <h6 div data-aos="fade" data-aos-duration="1000" data-aos-delay="1000">Hi, my name is</h3>
           <h1 class="block-effect" style="--td: 1.2s">
             <div class="block-reveal" style="--bc: #4040bf; --d: .1s">Razieh Boroon.</div>
             <div class="block-reveal" style="--bc: #bf4060; --d: .5s">I'm a Front End Developer.</div>
@@ -42,16 +43,16 @@
       </div>
     </header>
     <!-- About Section -->
-    <div class="about box" id="about" >
+    <section class="about box" id="about" >
       <!-- title -->
       <div class="title" id="about-title" >
-        <h1>About Me  </h1><div class="line"></div>
+        <h1>About Me  </h1>
       </div>
       <!-- content -->
       <div class="about-content">
         <div class="about-text" id="about-text" >
-          <p>Hello! My name is Razieh, I have master degree in Information Technology Engineering. Last year, started learning Front-End-Development by myself. I'm able to work with the following technologies:</p>
-          <ul>
+          <p data-aos="fade-up" data-aos-duration="1000">Hello! My name is Razieh, I have master degree in Information Technology Engineering. Last year, started learning Front-End-Development by myself. I'm able to work with the following technologies:</p>
+          <ul data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             <li><i class="fas fa-caret-right"></i>HTML</li>
             <li><i class="fas fa-caret-right"></i>CSS</li>
             <li><i class="fas fa-caret-right"></i>Bootstrap</li>
@@ -60,8 +61,8 @@
             <li><i class="fas fa-caret-right"></i>VSCode</li>
             <li><i class="fas fa-caret-right"></i>Git, GitHub</li>
           </ul>
-          <p>I'm also familiar with:</p>
-          <ul>
+          <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">I'm also familiar with:</p>
+          <ul data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
             <li><i class="fas fa-caret-right"></i>Node.js</li>
             <li><i class="fas fa-caret-right"></i>MongoDB, Mongoose</li>
             <li><i class="fas fa-caret-right"></i>Express</li>
@@ -69,33 +70,38 @@
             <li><i class="fas fa-caret-right"></i>RESTful API</li>
             <li><i class="fas fa-caret-right"></i>Authentication</li>
           </ul>
-          <a class="resume" href="./resume/CV-RaziehBoroon.pdf">Download CV</a>
+          <a data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="1500" class="resume" href="./resume/CV-RaziehBoroon.pdf">Download CV</a>
         </div>
-        <div class="about-img">
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" class="about-img">
           <img src="/img/razieh.jpg" alt="myPicture">
         </div>
       </div>
-    </div>
+    </section>
     <!-- portfolio -->
-    <div class="portfolio box" id="portfolio">
-      <div class="title" id="portfolio-title" >
-        <h1>Portfolio</h1>
-        <div class="line"></div>
+    <section class="portfolio box" id="portfolio">
+      <div class="title"  >
+        <h1 div data-aos="fade" data-aos-duration="1000" data-aos-delay="100">Portfolio</h1>
+        
       </div>
-    </div>
+    </section>
     <!-- contact -->
-    <div class="contact box" id="contact">
+    <section class="contact box" id="contact">
       <div class="title" id="contact-title" >
-        <h1>Contact Me</h1><div class="line"></div>
+        <h1 div data-aos="fade" data-aos-duration="1000" data-aos-delay="100">Contact Me</h1>
       </div>
       <div class="contact-container">
-        <div class="contact-item"><i class="fas fa-mobile-alt"></i>+98-936-2708294</div>
-        <div class="contact-item"><i class="fas fa-envelope"></i>razieh.boroon@gmail.com</div>
-        <div class="contact-item"><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/razieh-boroon-8a27b68a/" target="_blank">Razieh Boroon</a></div>
+        <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600" class="contact-item"><i class="fas fa-mobile-alt"></i>+98-936-2708294</div>
+        <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400" class="contact-item"><i class="fas fa-envelope"></i>razieh.boroon@gmail.com</div>
+        <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200" class="contact-item"><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/razieh-boroon-8a27b68a/" target="_blank">Razieh Boroon</a></div>
       </div>
-    </div>
+    </section>
     <footer><p>Designed and Built by Razieh Boroon</p> </footer>
-  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init();
+</script>
     <script src="scripts.js"></script>
   </body>
 </html>

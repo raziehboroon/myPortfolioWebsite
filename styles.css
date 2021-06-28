@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Train+One&display=swap");
 
 :root {
   --backgroundColor: #d8ddde;
@@ -23,15 +24,12 @@ body {
   background-color: var(--backgroundColor);
   color: var(--primaryFont);
   overflow-x: hidden;
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
-.container {
-  scroll-behavior: smooth;
-  overflow-y: scroll;
-  margin: 0;
-  padding: 0;
-}
-
+/* ********************* Navbar*************** */
 nav {
   position: fixed;
   top: 0;
@@ -43,7 +41,7 @@ nav ul {
   /* display: none; */
   height: 0;
   overflow: hidden;
-  transition: height 1s ease-in-out;
+  transition: height 0.3s ease-in;
 }
 nav ul.navToggle {
   height: 210px;
@@ -94,7 +92,7 @@ nav {
   color: var(--navActive);
   cursor: pointer;
 }
-
+/* ***************************** end of Navbar */
 header {
   min-height: 100vh;
   display: flex;
@@ -116,12 +114,7 @@ header {
 .banner-center h6 {
   color: var(--navBackgroundColor);
   font-size: 18px;
-}
-
-.banner-center h1 {
-  /* font-size: 50px; */
-  font-size: 3vm;
-  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 /* Banner Animation  */
@@ -160,7 +153,10 @@ header {
 /* animations */
 @keyframes revealBlock {
   100% {
-    color: #0f0f0f;
+    color: var(--navBackgroundColor);
+    font-family: "Train One", cursive;
+    font-size: 3vm;
+    font-weight: bold;
   }
 }
 
@@ -186,23 +182,24 @@ header {
 
 /* end of banner animation */
 .title {
+  text-transform: uppercase;
+  font-size: 3vm;
+  color: var(--navBackgroundColor);
   display: flex;
   align-items: center;
-  justify-content: left;
-  padding-bottom: 30px;
+  justify-content: center;
+  padding: 30px;
+  margin: 0 auto 50px auto;
+  text-align: center;
+  border-top: 1px solid var(--navBackgroundColor);
+  border-bottom: 1px solid var(--navBackgroundColor);
 }
 
-.title .line {
-  flex: 1 1 100px;
-  border: 1px solid var(--primaryFont);
-  margin: 0 10px;
-}
-
-.about {
-  min-height: 80vh;
-  max-width: 1000px;
-  margin: 150px auto 0 auto;
-  padding: 50px;
+section {
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 50px 0px 50px;
 }
 
 .about-content {
@@ -226,7 +223,7 @@ header {
   color: var(--navBackgroundHover);
 }
 
-.about-text .resume {
+.resume {
   text-decoration: none;
   border: 3px solid var(--navBackgroundColor);
   padding: 10px 15px;
@@ -256,20 +253,9 @@ header {
   opacity: 1;
 }
 
-.portfolio {
-  min-height: 100vh;
-  max-width: 1000px;
-  margin: 150px auto 0 auto;
-  padding: 50px;
-}
-
 .contact {
-  min-height: 80vh;
-  max-width: 1000px;
-  margin: 150px auto 0 auto;
-  padding: 50px;
+  min-height: 93vh !important;
 }
-
 .contact-container {
   display: flex;
   flex-direction: column;
@@ -297,7 +283,8 @@ header {
 }
 
 footer {
-  height: 70px;
+  /* height: 70px; */
+  min-height: 7vh;
   background: var(--navBackgroundColor);
   color: var(--backgroundColor);
   display: flex;
@@ -329,6 +316,7 @@ footer {
     flex-direction: row;
   }
   .contact-container {
+    padding: 100px 0;
     flex-direction: row;
   }
 }
