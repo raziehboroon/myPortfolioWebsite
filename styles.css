@@ -29,22 +29,52 @@ body {
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
-/* ********************* Navbar*************** */
+section {
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 70px 50px 0px 50px;
+}
+/* ********************* Header *************** */
+header {
+  min-height: 92vh;
+  display: flex;
+  flex-direction: column;
+}
+/* -------- Navbar-------  */
 nav {
   position: fixed;
   top: 0;
-  width: 100%;
+  left: 0;
+  right: 0;
   z-index: 10;
+  padding: 5px 15px;
+  border-bottom: 3px solid var(--backgroundColor);
+  background-color: var(--navBackgroundColor);
+  height: 70px;
+  /* child of header */
+  flex: 0 0 auto;
 }
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 nav ul {
   list-style-type: none;
   /* display: none; */
+  position: absolute;
   height: 0;
+  top: 70px;
+  left: 0;
+  right: 0;
   overflow: hidden;
-  transition: height 0.3s ease-in;
-}
-nav ul.navToggle {
-  height: 210px;
+  transition: height 0.3s ease-in-out;
+  background-color: var(--navBackgroundColor);
 }
 
 nav ul a {
@@ -65,39 +95,71 @@ nav ul a:hover {
   background: var(--navBackgroundHover);
 }
 
-.nav-container img {
+nav ul.navToggle {
+  height: 200px;
+}
+
+.logo img {
   height: 50px;
+  top: 0;
+  bottom: 0;
 }
 
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  border-bottom: 3px solid var(--backgroundColor);
-}
-
-nav {
-  background-color: var(--navBackgroundColor);
-  flex: 0 0 auto;
-}
-
-.nav-container .btn {
-  font-size: 35px;
-  color: var(--backgroundColor);
+.navBtn {
   transition: color 1s ease;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-.nav-container .btn:hover {
-  color: var(--navActive);
+.navBtn .navBtn-burger {
+  width: 35px;
+  height: 5px;
+  border-radius: 2px;
+  background-color: var(--backgroundColor);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navBtn-burger::before,
+.navBtn-burger::after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 5px;
+  border-radius: 2px;
+  background-color: var(--backgroundColor);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navBtn .navBtn-burger::before {
+  transform: translateY(-12px);
+}
+
+.navBtn .navBtn-burger::after {
+  transform: translateY(12px);
+}
+
+.navBtn:hover {
   cursor: pointer;
 }
-/* ***************************** end of Navbar */
-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+
+.navBtn.navToggle .navBtn-burger {
+  transform: translateX(-50px);
+  background-color: transparent;
 }
+
+.navBtn.navToggle .navBtn-burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.navBtn.navToggle .navBtn-burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+/* ----------------- end of Navbar */
 
 .banner {
   flex: 1 0 auto;
@@ -116,10 +178,27 @@ header {
   font-size: 18px;
   margin-bottom: 10px;
 }
+.resumeBtn {
+  border-radius: 5px;
+  border: 3px solid var(--navBackgroundColor);
+  text-decoration: none;
+  padding: 10px 15px;
+  color: var(--navBackgroundColor);
+  transition: all 0.3s ease-in-out;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.resumeBtn:hover {
+  border-color: var(--navBackgroundHover);
+  background-color: var(--navBackgroundHover);
+  color: white;
+}
 
 /* Banner Animation  */
 .block-effect {
   font-size: calc(8px + 6vw);
+  margin-bottom: 30px;
 }
 
 .block-reveal {
@@ -188,75 +267,186 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 30px;
+  padding: 15px 30px;
   margin: 0 auto 50px auto;
   text-align: center;
   border-top: 1px solid var(--navBackgroundColor);
   border-bottom: 1px solid var(--navBackgroundColor);
 }
 
-section {
-  min-height: 100vh;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 120px 50px 0px 50px;
-}
-
+/* ******************************** about section ************* */
 .about-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .about-text {
   padding-bottom: 50px;
+  flex: 0 1 60%;
 }
 .about-text ul {
   columns: 2;
-  margin: 30px;
+  margin: 10px 5px;
   list-style-type: none;
 }
 
 .about-text ul i {
-  margin-right: 10px;
+  margin-right: 5px;
   color: var(--navBackgroundHover);
 }
 
-.resume {
-  text-decoration: none;
-  border: 3px solid var(--navBackgroundColor);
-  padding: 10px 15px;
-  border-radius: 5px;
-  color: var(--navBackgroundColor);
-  transition: all 0.3s ease-in-out;
-  margin-bottom: 50px;
+.profileImg-container {
+  flex: 1 1 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* overflow: hidden; */
 }
 
-.about-text .resume:hover {
-  border-color: var(--navBackgroundHover);
-  background-color: var(--navBackgroundHover);
-  color: var(--navActive);
+.profileImg {
+  display: inline-block;
+  position: relative;
 }
-
-.about .about-img img {
-  /* margin: auto; */
+.profileImg img {
   width: 200px;
-  border-radius: 2px;
-  margin: 70px 50px 30px 50px;
-
-  opacity: 0.5;
-  transition: opacity 0.3s ease-in-out;
+  /* transition: opacity 0.3s ease-in-out; */
+  /* background-color: (rgba(0, 0, 0, 0.2)); */
 }
 
-.about-img img:hover {
+.profileImg::before {
+  content: "";
+  position: absolute;
+  bottom: -12%;
+  right: -15%;
+  width: 100%;
+  height: 100%;
+  border: 3px solid var(--navBackgroundColor);
+  border-radius: 3px;
+  z-index: -10;
+  transition: all 0.5s ease-in-out;
+}
+
+.profileImg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(154, 97, 160, 0.5);
+  z-index: 10;
+  transition: all 0.5s ease-in-out;
+}
+
+.profileImg:hover::before {
+  bottom: -10px;
+  right: -12px;
+}
+
+.profileImg:hover::after {
+  background-color: rgba(154, 97, 160, 0);
+}
+
+/* **************************** Portfolio section ************* */
+.portfolio {
+  text-transform: capitalize;
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  /* margin: 0 20px; */
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin: 25px;
+  min-width: 350px;
+  max-height: 550px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.card-image-container {
+  overflow: hidden;
+  border: 10px solid rgb(248, 247, 247);
+  position: relative;
+  opacity: 0.5;
+  transition: opacity 0.5s ease-in-out;
+}
+.card-image-container img {
+  width: 100%;
+  height: 350px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card-image-container .view-app {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  height: 100%;
+  width: 100%;
+  cursor: poiner;
+}
+
+.card-image-container:hover img {
+  transform: scale(1.5);
+}
+
+.card-image-container:hover {
   opacity: 1;
 }
+
+.card-footer {
+  padding: 20px 25px;
+}
+
+.card h4 {
+  color: var(--primaryFont);
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+.card-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card-btn a {
+  padding: 5px 15px;
+  min-width: 125px;
+  text-align: center;
+  border-radius: 5px;
+  border: 3px solid var(--navBackgroundColor);
+  text-decoration: none;
+  color: var(--navBackgroundColor);
+  transition: all 0.3s ease-in-out;
+  font-size: 16px;
+  font-weight: bold;
+  outline: none;
+}
+
+.card-btn a:hover {
+  border-color: var(--navBackgroundHover);
+  background-color: var(--navBackgroundHover);
+  color: white;
+}
+
+/* **************************** contact section ************* */
 
 .contact {
   min-height: 93vh !important;
 }
-.contact-container {
+.contact-item-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -264,7 +454,7 @@ section {
   margin-top: 50px;
 }
 
-.contact-container .contact-item {
+.contact-item {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -282,6 +472,8 @@ section {
   color: var(--navActive);
 }
 
+/* **************************** footer section ************* */
+
 footer {
   /* height: 70px; */
   min-height: 7vh;
@@ -294,15 +486,27 @@ footer {
 }
 
 @media screen and (min-width: 776px) {
-  .nav-container {
+  nav {
+    /* padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; */
+  }
+  .navBtn {
     display: none;
   }
   nav ul {
     display: flex;
-    height: 100px !important;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
+    height: 100% !important;
+    position: relative;
+    top: 0;
+    flex-wrap: wrap;
+  }
+
+  nav ul a {
+    padding: 10px 20px;
   }
   nav ul a:hover {
     background-color: transparent;
@@ -311,11 +515,27 @@ footer {
   .block-effect {
     font-size: calc(8px + 3vw);
   }
-
+  section {
+    padding-top: 100px;
+  }
+  .title {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
   .about-content {
     flex-direction: row;
   }
-  .contact-container {
+  .about-text ul {
+    margin: 10px;
+  }
+  .about-text ul i {
+    margin-right: 10px;
+  }
+  .card-container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .contact-item-container {
     padding: 100px 0;
     flex-direction: row;
   }

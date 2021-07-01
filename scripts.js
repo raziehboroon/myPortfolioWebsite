@@ -1,9 +1,10 @@
-const navBtn = document.querySelector(".btn");
+const navBtn = document.querySelector(".navBtn");
 const menuSlide = document.querySelector("#menu");
 const navLinks = document.querySelectorAll("nav ul a");
 
 navBtn.addEventListener("click", () => {
   menuSlide.classList.toggle("navToggle");
+  navBtn.classList.toggle("navToggle");
 });
 
 navLinks.forEach((navLink) => {
