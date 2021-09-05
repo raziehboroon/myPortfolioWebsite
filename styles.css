@@ -498,7 +498,7 @@ Contact
 */
 
 .contact {
-  /* min-height: 70vh !important; */
+  min-height: calc(80vh - 5rem);
   /* padding-top: 0; */
   background: linear-gradient(
       rgba(255, 255, 255, 0.7),
@@ -507,7 +507,6 @@ Contact
     url(./img/contact-us.jpg) center/cover scroll no-repeat;
 }
 .contact-center {
-  /* min-height: 70vh; */
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 1rem 1rem 1rem 1rem;
@@ -610,6 +609,9 @@ footer {
     flex-direction: row;
   }
 
+  .contact {
+    min-height: 100%;
+  }
   .contact-container {
     margin: 2rem auto;
     max-width: 70%;
