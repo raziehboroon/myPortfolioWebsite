@@ -4,150 +4,288 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-    <link rel="manifest" href="img/site.webmanifest">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
     <title>Razieh Boroon</title>
 
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- preloader -->
-    <div class="preloader-container">
-      <div class="preloader">
-        <!-- <img src="./img/android-chrome-192x192.png" alt=""> -->
-
-      </div>
-    </div>
-    <!-- Header -->
-    <header id="header">
-      <nav div data-aos="fade-down" data-aos-duration="1000" data-aos-delay="500">
-        <div class="container">
-          <div class="logo">
-            <a href="#header"><img src="img/android-chrome-192x192.png" alt="logo" /></a>
-          </div>
-          <ul id="menu">
-            <li><a href="#about">about</a></li>
-            <li><a href="#portfolio">portfolio</a></li>
-            <li><a href="#contact">contact</a></li>
-          </ul>
-          <div class="navBtn">
-            <div class="navBtn-burger"></div>
-          </div>
-      </div>
-      </nav>
-      <div class="banner">
-        <div class="banner-center">
-          <h6 div data-aos="fade" data-aos-duration="1000" data-aos-delay="1000">Hi, my name is</h3>
-          <h1 class="block-effect" style="--td: 1.2s">
-            <div class="block-reveal" style="--bc: #4040bf; --d: .1s">Razieh Boroon.</div>
-            <div class="block-reveal" style="--bc: #bf4060; --d: .5s">I'm a Front End Developer.</div>
-          </h1>
-          <div>
-          <a class="resumeBtn" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="2500" href="http://www.google.com">Download CV</a>
+    <!-- navbar -->
+    <nav>
+      <div class="nav-center">
+        <div class="nav-logo">
+          <a href="#header"
+            ><img src="img/android-chrome-192x192.png" alt="logo"
+          /></a>
         </div>
+        <ul id="menu">
+          <li><a href="#header">home</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#projects">projects</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+        <div class="navBtn">
+          <div class="navBtn-burger"></div>
+        </div>
+      </div>
+    </nav>
+    <!-- banner -->
+    <header class="banner" id="header">
+      <div
+        class="banner-center section"
+        data-aos="fade"
+        data-aos-duration="1000"
+        data-aos-delay="1000"
+      >
+        <div class="banner-info">
+          <h4>Hi, my name is</h4>
+          <h1>Razieh Boroon</h1>
+          <h4>I'm a Front End Developer.</h4>
+          <div class="social-links icons">
+            <a
+              href="https://www.linkedin.com/in/razieh-boroon-8a27b68a/"
+              target="_blank"
+              ><i class="fab fa-linkedin"> </i
+            ></a>
+            <a href="https://github.com/raziehboroon" target="_blank">
+              <i class="fab fa-github"></i
+            ></a>
+            <a href="https://twitter.com/raziehboroon" target="_blank">
+              <i class="fab fa-twitter"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="profile-img">
+          <img src="/img/razieh.jpg" alt="myPicture" />
         </div>
       </div>
     </header>
     <!-- About Section -->
-    <section class="about" id="about" >
-      <!-- title -->
-      <div class="title" >
-        <h1>about me</h1>
-      </div>
-      <!-- content -->
-      <div class="about-content">
-        <div class="about-text" >
-          <p data-aos="fade-up" data-aos-duration="1000">Hello! My name is Razieh, I have master degree in Information Technology Engineering. Last year, started learning Front-End-Development by myself. I'm able to work with the following technologies:</p>
-          <ul data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-            <li><i class="fas fa-caret-right"></i>HTML</li>
-            <li><i class="fas fa-caret-right"></i>CSS</li>
-            <li><i class="fas fa-caret-right"></i>Bootstrap</li>
-            <li><i class="fas fa-caret-right"></i> JavaScript (ES6+)</li>
-            <li><i class="fas fa-caret-right"></i>React.js</li>
-            <li><i class="fas fa-caret-right"></i>VSCode</li>
-            <li><i class="fas fa-caret-right"></i>Git, GitHub</li>
-          </ul>
-          <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">I'm also familiar with:</p>
-          <ul data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-            <li><i class="fas fa-caret-right"></i>Node.js</li>
-            <li><i class="fas fa-caret-right"></i>MongoDB, Mongoose</li>
-            <li><i class="fas fa-caret-right"></i>Authentication</li>
-            <li><i class="fas fa-caret-right"></i>Express</li>
-            <li><i class="fas fa-caret-right"></i>EJS</li>
-            <li><i class="fas fa-caret-right"></i>REST</li>
-          </ul>
-
-          
+    <section class="about" id="about">
+      <div class="section">
+        <!-- title -->
+        <div class="title">
+          <h2>about</h2>
+          <div class="title-underline"></div>
         </div>
-        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" class="profileImg-container">
-          <div class="profileImg">
-            <img src="/img/razieh.jpg" alt="myPicture">
+        <!-- content -->
+        <div class="about-content">
+          <!-- image -->
 
+          <div
+            class="about-img"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="500"
+          >
+            <img
+              src="/img/georgie-cobbs-muOHbrFGEQY-unsplash.jpg"
+              alt="desktop"
+            />
           </div>
-          
+
+          <div class="about-text">
+            <p data-aos="fade-up" data-aos-duration="1000">
+              Hello! My name is Razieh, I have master degree in Information
+              Technology Engineering. I'm able to work with the following
+              technologies:
+            </p>
+            <ul
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="100"
+            >
+              <li><i class="fas fa-caret-right"></i>HTML5</li>
+              <li><i class="fas fa-caret-right"></i>CSS3</li>
+              <li><i class="fas fa-caret-right"></i>Bootstrap</li>
+              <li><i class="fas fa-caret-right"></i>JavaScript (ES6+)</li>
+              <li><i class="fas fa-caret-right"></i>React.js</li>
+              <li><i class="fas fa-caret-right"></i>VSCode</li>
+              <li><i class="fas fa-caret-right"></i>Git, GitHub</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
-    <!-- portfolio -->
-    <section class="portfolio" id="portfolio">
-      <div class="title"  >
-        <h1 div data-aos="fade" data-aos-duration="1000" data-aos-delay="100">Portfolio</h1>
-      </div>
-      <div class="card-container">
-        <!-- single card -->
-        <div class="card" data-aos="fade-right" data-aos-duration="700" data-aos-delay="400">
-          <div class="card-image-container">
-          <img src="img/wehather.jpg" alt="weatherApp" 
-          >
-          <a target="_blank" class="view-app" href="http://www.google.com"></a></div>
-          <div class="card-footer">
-            <h4>Weather App</h4> 
-            <div class="card-btn">
-              
-              <a href="http://www.google.com">view code</a>
-            </div> 
-          </div>
+    <!-- ptojects -->
+    <section class="projects" id="projects">
+      <div class="section">
+        <div class="title">
+          <h2>Project</h2>
+          <div class="title-underline"></div>
         </div>
-        <!-- single card -->
-        <div class="card" data-aos="fade-left" data-aos-duration="700" data-aos-delay="400">
-          <div class="card-image-container">
-          <img src="img/covid.jpg" alt="covidApp">
-          <a target="_blank" class="view-app" href="http://www.google.com"></a>
-          </div>   
-          <div class="card-footer">
-            <h4>covid tracker App</h4> 
-            <div class="card-btn">
-              <a href="http://www.google.com">view code</a>
-            </div> 
+        <div class="card-container">
+          <!-- single card -->
+          <div
+            class="card"
+            data-aos="fade-right"
+            data-aos-duration="700"
+            data-aos-delay="100"
+          >
+            <div class="card-image-container">
+              <img src="img/MovieDB.png" alt="App Screenshot" />
+            </div>
+            <div class="card-footer">
+              <h4>MovieDB App</h4>
+              <h5>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                neque exercitationem ad assumenda at quae, optio consectetur
+                eligendi odit iure.
+              </h5>
+              <div class="project-links icons">
+                <a
+                  href="https://github.com/raziehboroon/react-moviedb"
+                  target="_blank"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a
+                  href="https://rboroon-moviedb-app.netlify.app/"
+                  target="_blank"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <!-- single card -->
+          <div
+            class="card"
+            data-aos="fade-right"
+            data-aos-duration="700"
+            data-aos-delay="200"
+          >
+            <div class="card-image-container">
+              <img src="img/plantstore.png" alt="store Screenshot" />
+            </div>
+            <div class="card-footer">
+              <h4>Plant Store</h4>
+              <h5>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                neque exercitationem ad assumenda at quae, optio consectetur
+                eligendi odit iure.
+              </h5>
+              <div class="project-links icons">
+                <a
+                  href="https://github.com/raziehboroon/react-plant-store"
+                  target="_blank"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a
+                  href="https://rboroon-plant-store.netlify.app/"
+                  target="_blank"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <!-- single card -->
+          <div
+            class="card"
+            data-aos="fade-right"
+            data-aos-duration="700"
+            data-aos-delay="300"
+          >
+            <div class="card-image-container">
+              <img src="img/project3.jpg" alt="app Screenshot" />
+            </div>
+            <div class="card-footer">
+              <h4>App title</h4>
+              <h5>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                neque exercitationem ad assumenda at quae, optio consectetur
+                eligendi odit iure.
+              </h5>
+              <div class="project-links icons">
+                <a href="https://github.com/raziehboroon" target="_blank"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a href="https://www.google.com" target="_blank"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
     <!-- contact -->
     <section class="contact" id="contact">
-      <div class="title" >
-        <h1 div data-aos="fade" data-aos-duration="1000" data-aos-delay="100">Contact Me</h1>
-      </div>
-      <div class="contact-item-container">
-        <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600" class="contact-item"><i class="fas fa-mobile-alt"></i>+98-936-270-8294</div>
-        <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400" class="contact-item"><i class="fas fa-envelope"></i>razieh.boroon@gmail.com</div>
-        <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200" class="contact-item"><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/razieh-boroon-8a27b68a/" target="_blank">Razieh Boroon</a></div>
+      <div class="contact-center">
+        <div class="title">
+          <h2>let's get in touch</h2>
+          <div class="title-underline"></div>
+        </div>
+        <div
+          class="contact-container"
+          data-aos="fade"
+          data-aos-duration="500"
+          data-aos-delay="500"
+        >
+          <p>
+            If you are looking to get ahold of me, you can send me an email at
+            <a href="mailto:razieh.boroon@gmail.com" target="_blank"
+              ><span>razieh.boroon<i class="fas fa-at"></i>gmail.com</span>
+            </a>
+            <br />
+            <br />
+            can also reach me through this number<span> +98-***-****</span>
+          </p>
+        </div>
       </div>
     </section>
-    <footer><p>Designed and Built by Razieh Boroon</p> </footer>
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script>
-  AOS.init();
-</script>
+    <footer>
+      <div class="contact-links">
+        <a
+          href="https://www.linkedin.com/in/razieh-boroon-8a27b68a/"
+          target="_blank"
+          ><i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/raziehboroon" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="https://twitter.com/raziehboroon" target="_blank">
+          <i class="fab fa-twitter"></i
+        ></a>
+        <a href="mailto:razieh.boroon@gmail.com" target="_blank"
+          ><i class="fas fa-envelope"></i
+        ></a>
+      </div>
+      <h4>
+        <i class="far fa-copyright"></i>
+        <span id="copyright-date"></span> all rights reserved |
+        <span class="footer-name">Razieh Boroon</span>
+      </h4>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="scripts.js"></script>
   </body>
 </html>
