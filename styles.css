@@ -372,7 +372,6 @@ Banner
   height: 100%;
   border: 3px solid var(--clr-primary-2);
   /* background: linear-gradient(to bottom right, var(--clr-primary-5), #222); */
-
   border-radius: 0.3rem;
   z-index: -10;
   transition: all 0.5s ease-in-out;
